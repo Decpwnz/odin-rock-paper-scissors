@@ -2,12 +2,21 @@ function getComputerChoice() {
   const randomNumber = Math.round(Math.random() * 3);
 
   return randomNumber === 1
-    ? console.log("Rock")
+    ? "Rock"
     : randomNumber === 2
-    ? console.log("Paper")
+    ? "Paper"
     : randomNumber === 3
-    ? console.log("Scissors")
+    ? "Scissors"
     : null;
 }
 
-getComputerChoice();
+function getHumanChoice(input) {
+  // 1. Ask user to enter prompt
+  userInput = prompt(input);
+
+  // 2. return entered prompt
+  return userInput;
+}
+
+console.log(`Computer choice: ${getComputerChoice()}`);
+console.log(`User input: ${getHumanChoice()}`);
